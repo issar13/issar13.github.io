@@ -1,5 +1,73 @@
 "use strict";
 
+// ======= Network Background Canvas =======
+(function () {
+    var canvas = document.getElementById('network-bg');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var NODES = 60, LINK_DIST = 140, COLOR = '167,139,250';
+    var nodes = [];
+
+    function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    function initNodes() {
+        nodes = [];
+        for (var i = 0; i < NODES; i++) {
+            nodes.push({
+                x:  Math.random() * canvas.width,
+                y:  Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.35,
+                vy: (Math.random() - 0.5) * 0.35,
+                r:  Math.random() * 1.5 + 1,
+            });
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var i, j, n, dx, dy, dist, alpha;
+
+        for (i = 0; i < nodes.length; i++) {
+            for (j = i + 1; j < nodes.length; j++) {
+                dx   = nodes[i].x - nodes[j].x;
+                dy   = nodes[i].y - nodes[j].y;
+                dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < LINK_DIST) {
+                    alpha = 0.16 * (1 - dist / LINK_DIST);
+                    ctx.beginPath();
+                    ctx.strokeStyle = 'rgba(' + COLOR + ',' + alpha + ')';
+                    ctx.lineWidth   = 0.7;
+                    ctx.moveTo(nodes[i].x, nodes[i].y);
+                    ctx.lineTo(nodes[j].x, nodes[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+
+        for (i = 0; i < nodes.length; i++) {
+            n = nodes[i];
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(' + COLOR + ',0.4)';
+            ctx.fill();
+            n.x += n.vx;
+            n.y += n.vy;
+            if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+            if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+        }
+
+        requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', function () { resize(); initNodes(); });
+    resize();
+    initNodes();
+    draw();
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // ======= AOS =======
