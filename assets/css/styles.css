@@ -339,16 +339,21 @@ code {
         linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
         linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
         linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9));
+    background-size:
+        2px 20px, 20px 2px,
+        2px 20px, 20px 2px,
+        2px 20px, 20px 2px,
+        2px 20px, 20px 2px;
     animation: corner-heartbeat 2.4s ease-in-out infinite;
 }
 
 @keyframes corner-heartbeat {
-    0%   { background-size: 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px; }
-    12%  { background-size: 2px 24px, 24px 2px, 2px 24px, 24px 2px, 2px 24px, 24px 2px, 2px 24px, 24px 2px; }
-    24%  { background-size: 2px 15px, 15px 2px, 2px 15px, 15px 2px, 2px 15px, 15px 2px, 2px 15px, 15px 2px; }
-    36%  { background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px, 2px 20px, 20px 2px, 2px 20px, 20px 2px; }
-    52%  { background-size: 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px; }
-    100% { background-size: 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px; }
+    0%   { opacity: 0.75; }
+    12%  { opacity: 1;    }
+    24%  { opacity: 0.8;  }
+    36%  { opacity: 1;    }
+    52%  { opacity: 0.75; }
+    100% { opacity: 0.75; }
 }
 
 /* ======= Terminal Tab Bar ======= */
