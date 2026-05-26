@@ -1,48 +1,63 @@
 "use strict";
 
-//Enable tooltips everywhere
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+document.addEventListener('DOMContentLoaded', function () {
 
+    // ======= AOS =======
+    if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 650, once: true, offset: 55, easing: 'ease-out-cubic' });
+    }
 
-/* Vanilla RSS - https://github.com/sdepold/vanilla-rss */
+    // ======= Typed.js =======
+    if (typeof Typed !== 'undefined' && document.getElementById('typed-subtitle')) {
+        new Typed('#typed-subtitle', {
+            strings: [
+                'Realtime Systems',
+                'Communication Infrastructure',
+                'Backend Architecture',
+                'Distributed Systems',
+                'Fullstack Product Engineering',
+            ],
+            typeSpeed: 60,
+            backSpeed: 32,
+            backDelay: 2200,
+            loop: true,
+            smartBackspace: true,
+        });
+    }
 
-	const rss = new RSS(
-	    document.querySelector("#rss-feeds"),
-	    //Change this to your own rss feeds
-        "https://feeds.feedburner.com/TechCrunch/startups",
-	    {
-		     // how many entries do you want?
-		    // default: 4
-		    // valid values: any integer
-		    limit: 3,
-		    
-		    
-		    // will request the API via https
-			// default: false
-			// valid values: false, true
-			ssl: true,
-		  
-			 // outer template for the html transformation
-			// default: "<ul>{entries}</ul>"
-			// valid values: any string
-			layoutTemplate: "<div class='items'>{entries}</div>",
-		
-			// inner template for each entry
-			// default: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>'
-			// valid values: any string
-			entryTemplate: '<div class="item"><h3 class="title"><a href="{url}" target="_blank">{title}</a></h3><div><p>{shortBodyPlain}</p><a class="more-link" href="{url}" target="_blank"><i class="fas fa-external-link-alt"></i>Read more</a></div></div>',
-		    
-	    }
-	);
-	rss.render();
+    // ======= Scroll Progress Bar =======
+    var progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+        window.addEventListener('scroll', function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            progressBar.style.width = progress + '%';
+        }, { passive: true });
+    }
 
-    
-    /* Github Calendar - https://github.com/IonicaBizau/github-calendar */
-    new GitHubCalendar("#github-graph", "IonicaBizau", { responsive: true });
-    
-    
-    /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
-    GitHubActivity.feed({ username: "mdo", selector: "#ghfeed" });
+    // ======= Bootstrap Tooltips =======
+    var tooltipEls = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipEls.forEach(function (el) {
+        if (typeof bootstrap !== 'undefined') new bootstrap.Tooltip(el);
+    });
+
+});
+
+// ======= Project Card Expand / Collapse =======
+function toggleProject(btn) {
+    var body = btn.closest('.project-card-body');
+    var details = body.querySelector('.project-details');
+    var expandText = btn.querySelector('.expand-text');
+    var isOpen = details.style.display !== 'none' && details.style.display !== '';
+
+    if (isOpen) {
+        details.style.display = 'none';
+        expandText.textContent = 'View Engineering Details';
+        btn.classList.remove('active');
+    } else {
+        details.style.display = 'block';
+        expandText.textContent = 'Hide Details';
+        btn.classList.add('active');
+    }
+}

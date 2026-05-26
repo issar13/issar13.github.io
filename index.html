@@ -2,486 +2,639 @@
 <html lang="en">
 
 <head>
-    <title>Issa Mwazighe Suleiman</title>
-    <!-- Meta -->
+    <title>Issa Suleiman — Senior Software Engineer</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boootstrap Portfolio/Resume Theme for Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="Senior Software Engineer specializing in realtime systems, communication infrastructure, backend architecture, and scalable cloud platforms.">
+    <meta name="author" content="Issa Mwazighe Suleiman">
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
 
-    <!-- FontAwesome JS -->
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.js"></script>
-    <script
-  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
 
-    <!-- Global CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar-responsive.css">
-    <!-- github activity css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-/>
-
 </head>
 
-<body>
-    <!-- ******HEADER****** -->
-    <header class="header">
-        <div class="container">
+<body data-theme="dark">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- ======= HERO ======= -->
+    <header class="hero-header" id="top">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
             <div class="row align-items-center">
-                <div class="col">
-                    <img class="profile-image img-fluid float-start rounded-circle" style="margin:10px 10px 10px 12px;" src="assets/images/profile.png" alt="profile image" width="100" style="margin-top:20px" />
-                    <div class="profile-content">
-                        <h1 class="name">Issa Mwazighe Suleiman</h1>
-                        <h2 class="desc">Software Engineer</h2>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item"><a href="https://twitter.com/issarsuleiman"><i class="fab fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="https://linkedin.com/in/issa-suleiman"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a href="https://github.com/issar13/"><i class="fab fa-github-alt"></i></a></li>
-                            <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow"></i></a></li>    -->
-                            <!-- <li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li>                 -->
-                        </ul>
+                <div class="col-lg-8">
+                    <img class="profile-image rounded-circle" src="assets/images/profile.png" alt="Issa Suleiman" width="80" height="80" />
+                    <h1 class="hero-name">
+                        Issa Mwazighe<br>
+                        <span class="hero-name-accent">Suleiman</span>
+                    </h1>
+                    <h2 class="hero-title">Senior Software Engineer <span id="typed-subtitle"></span></h2>
+                    <p class="hero-bio">
+                        7+ years building production-grade systems across realtime infrastructure, Twilio communication pipelines, AWS serverless architecture, and high-performance React frontends. Currently shipping at <strong>Piedmont Global</strong>.
+                    </p>
+
+                    <div class="focus-pills mb-4">
+                        <span class="focus-pill">Realtime Systems</span>
+                        <span class="focus-pill">Communication Infrastructure</span>
+                        <span class="focus-pill">Backend Architecture</span>
+                        <span class="focus-pill">Distributed State</span>
+                        <span class="focus-pill">Cloud &amp; Serverless</span>
+                        <span class="focus-pill">Fullstack Product Systems</span>
                     </div>
-                    <!--//profile-->
+
+                    <div class="hero-ctas mb-4">
+                        <a class="btn-primary-cta" href="#work"><i class="fas fa-folder-open"></i> View My Work</a>
+                        <a class="btn-outline-cta" href="mailto:issa.suleiman008@gmail.com"><i class="fas fa-paper-plane"></i> Email Me</a>
+                    </div>
+
+                    <ul class="social-links list-inline">
+                        <li class="list-inline-item"><a href="https://twitter.com/issarsuleiman" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://linkedin.com/in/issa-suleiman" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/issar13/" title="GitHub" target="_blank"><i class="fab fa-github-alt"></i></a></li>
+                    </ul>
                 </div>
-                <!--//col-->
-                <div class="col-12 col-md-auto">
-                    <div class="dark-mode-switch d-flex">
-                        <div class="form-check form-switch mx-auto mx-md-0" style="display: none;">
-                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch" checked/>
-                            <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+
+                <div class="col-lg-4 d-none d-lg-flex justify-content-end mt-4 mt-lg-0">
+                    <div class="hero-stats">
+                        <div class="stat-card" data-aos="fade-left" data-aos-delay="100">
+                            <div class="stat-number">7+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-left" data-aos-delay="200">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Senior Roles</div>
+                        </div>
+                        <div class="stat-card" data-aos="fade-left" data-aos-delay="300">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Production Systems</div>
                         </div>
                     </div>
-                    <!--//dark-mode-switch-->
-                    <a class="btn btn-cta-primary" style="margin-bottom: 50px;" href="mailto:issa.suleiman008@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i> Email Me</a>
                 </div>
-                <!--//col-->
             </div>
-            <!--//row-->
         </div>
-        <!--//container-->
+        <div class="scroll-indicator">
+            <a href="#work"><i class="fas fa-chevron-down"></i></a>
+        </div>
     </header>
-    <!--//header-->
+    <!--//hero-header-->
 
-    <div class="container sections-wrapper py-5">
+    <div class="container sections-wrapper py-5" id="work">
         <div class="row">
+
+            <!-- ===== MAIN COLUMN ===== -->
             <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
+
+                <!-- About -->
+                <section class="about section" data-aos="fade-up">
+                    <div class="section-inner">
                         <h2 class="heading">About Me</h2>
                         <div class="content">
-                            <p> Full Stack Developer with 5 years of experience in designing and developing scalable applications using Node.js, React, and PostgreSQL. Proficient in setting up CI/CD pipelines and employing agile development methodologies to ensure the delivery of high-quality software products. Demonstrates quick learning abilities, creative problem-solving skills, and effective collaboration with cross-functional teams to complete projects on time and within budget. Committed to crafting software solutions that are robust, scalable, and time tested</p>
-                            </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My Projects</h2>
-                        <div class="content">
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><a href="https://research.portal.jhu.angani.co/">Research Portal</a></h3>
-                                <p class="summary"> Research portal that integrates with Kobo tools to create a central space for keeping research projects and it's info.</p>
-                            </div>
-
-                            <div class="item">
-                                <h3 class="title"><a href="https://contact-store-api-qy3f.onrender.com/documentation">Contact Store API</a></h3>
-                                <p class="summary">A simple contact storing API that uses encryption and validation to store data</p>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><a href="https://cms.pangamalipo.cloud/">Panga Malipo</a></h3>
-                                <p class="summary">A subscription manager that handles subscription renewal through sms</p>
-                            </div>
-
-                            <div class="item">
-                                <h3 class="title"><a href="https://app.orderassist.cloud/">Order Assist</a></h3>
-                                <p class="summary">An ordering system manager that tracks restaurants order in-house</p>
-                            </div>
-
-                            
-
-                            <!-- <div class="item row"> -->
-                                <!-- <a class="col-md-4 col-12" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">CoderPro - Boootstrap Startup Template For Software Projects</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim,
-                                        eget iaculis ante dolor non turpis.</p>
-                                    <p><a class="more-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div> --> 
-                                <!--//desc-->
-                            <!-- </div> -->
-                            <!--//item
-
-
+                            <p>Full-stack engineer with 7+ years building typed, scalable systems from backend design to frontend polish. Focused on realtime infrastructure, communication systems (Twilio / TaskRouter), cloud-native architecture on AWS, and high-performance React frontends.</p>
+                            <p>Works best at the intersection of architecture and usability — turning complex requirements into reliable, type-safe solutions that ship fast and stay stable. Known for bridging backend and frontend teams, quietly raising the quality bar through structure, and writing code other engineers trust to build on.</p>
+                            <p>Currently at <a href="https://piedmontglobal.com" target="_blank">Piedmont Global</a> designing and operating large-scale real-time communication infrastructure for a global localization platform.</p>
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
                 </section>
-                <!--//section-->
-                <!--//section-->
 
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
+                <!-- Engineering Work -->
+                <section class="projects-section section" data-aos="fade-up">
+                    <div class="section-inner">
+                        <h2 class="heading">Engineering Work</h2>
+                        <p class="section-intro">Selected systems I've designed, built, and shipped in production. Each represents a distinct engineering domain.</p>
+
+                        <!-- Project 1: Realtime Notification Center -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="50">
+                            <div class="project-card-banner banner-green">
+                                <div class="banner-icon"><i class="fas fa-bolt"></i></div>
+                                <div class="banner-label">Realtime Systems</div>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Realtime Notification Center</h3>
+                                <p class="project-summary">Multi-tab notification system with distributed state synchronization for a B2B communication platform.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">NestJS</span>
+                                    <span class="tech-pill">PostgreSQL</span>
+                                    <span class="tech-pill">Pusher</span>
+                                    <span class="tech-pill">React</span>
+                                    <span class="tech-pill">TypeScript</span>
+                                    <span class="tech-pill">Redis</span>
+                                </div>
+                                <button class="btn-expand" onclick="toggleProject(this)">
+                                    <span class="expand-text">View Engineering Details</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </button>
+                                <div class="project-details" style="display:none;">
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-layer-group"></i> Overview</h4>
+                                        <p>Designed and implemented a realtime notification infrastructure for a healthcare communication platform supporting appointment lifecycle events. The system delivers consistent, deduplicated notifications across multiple browser tabs and sessions, with persistent unread state synchronization.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-sitemap"></i> Architecture</h4>
+                                        <ul>
+                                            <li>Pusher channels for realtime event broadcasting to connected clients</li>
+                                            <li>NestJS event emitters for server-side lifecycle triggers</li>
+                                            <li>PostgreSQL for persistent notification and read-state storage</li>
+                                            <li>Redis for cross-instance event coordination</li>
+                                            <li>React + custom hooks for client-side subscription management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-exclamation-triangle"></i> Engineering Challenges</h4>
+                                        <ul>
+                                            <li>Preventing duplicate browser notifications when multiple tabs are open for the same session</li>
+                                            <li>Synchronizing read/unread state across tabs in realtime without a SharedWorker</li>
+                                            <li>Handling websocket reconnection gracefully without missing events during the gap</li>
+                                            <li>Token refresh without interrupting active Pusher subscriptions</li>
+                                            <li>Ensuring notification ordering consistency under high-frequency event bursts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-code-branch"></i> Key Decision</h4>
+                                        <p>Used per-tab Pusher connections with a leader-election pattern (via <code>localStorage</code> events) to designate which tab owns browser notification dispatch — eliminating duplicates without the complexity of a SharedWorker. Simpler to debug and zero cross-origin issues.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                                        <p>Eliminated missed appointment events for support agents, ensuring reliable notification delivery regardless of how many tabs or sessions were open simultaneously.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Twilio Communication Platform -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-card-banner banner-blue">
+                                <div class="banner-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="banner-label">Communication Infrastructure</div>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">Twilio Communication Platform</h3>
+                                <p class="project-summary">Large-scale real-time communications infrastructure across voice, video, messaging, and intelligent task routing.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">Twilio</span>
+                                    <span class="tech-pill">TaskRouter</span>
+                                    <span class="tech-pill">NestJS</span>
+                                    <span class="tech-pill">Inngest</span>
+                                    <span class="tech-pill">AWS Lambda</span>
+                                    <span class="tech-pill">TypeScript</span>
+                                </div>
+                                <button class="btn-expand" onclick="toggleProject(this)">
+                                    <span class="expand-text">View Engineering Details</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </button>
+                                <div class="project-details" style="display:none;">
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-layer-group"></i> Overview</h4>
+                                        <p>Designed and operated communication infrastructure for a global B2B platform, handling interaction workflows across voice, video, messaging, and intelligent task routing. Built event-driven orchestration with Inngest and AWS Lambda for communication lifecycle automation at scale.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-sitemap"></i> Architecture</h4>
+                                        <ul>
+                                            <li>Twilio TaskRouter for skills-based task assignment across worker pools</li>
+                                            <li>Twilio Voice, Video, and Messaging APIs for channel handling</li>
+                                            <li>Inngest for reliable background job orchestration with built-in retries</li>
+                                            <li>AWS Lambda for stateless communication lifecycle event processing</li>
+                                            <li>Custom <code>useTaskRouter</code> React hook for frontend worker state management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-exclamation-triangle"></i> Engineering Challenges</h4>
+                                        <ul>
+                                            <li>Managing TaskRouter worker lifecycle including token expiry and refresh without dropping reservations</li>
+                                            <li>Handling reservation state transitions across network interruptions</li>
+                                            <li>IVR fallback routing when primary queues are unavailable</li>
+                                            <li>Coordinating async communication events across distributed Lambda invocations</li>
+                                            <li>Maintaining worker availability state reliably under concurrent task assignments</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-code-branch"></i> Key Decision</h4>
+                                        <p>Built a custom <code>useTaskRouter</code> hook encapsulating the full worker lifecycle — registration, token refresh, reservation handling, and disconnection recovery — rather than spreading this logic across components. This made the TaskRouter integration testable in isolation and reusable across different UI surfaces.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                                        <p>Enabled reliable task routing across multiple communication channels for a global workforce, with resilient token management preventing dropped reservations during extended sessions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: AWS Cloud Migration -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="project-card-banner banner-orange">
+                                <div class="banner-icon"><i class="fab fa-aws"></i></div>
+                                <div class="banner-label">Cloud Infrastructure</div>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">AWS Cloud Migration &amp; Infrastructure</h3>
+                                <p class="project-summary">Led Azure Blob → AWS S3 migration with zero downtime and LocalStack-powered integration test coverage.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">AWS S3</span>
+                                    <span class="tech-pill">AWS ECS</span>
+                                    <span class="tech-pill">AWS Lambda</span>
+                                    <span class="tech-pill">LocalStack</span>
+                                    <span class="tech-pill">Docker</span>
+                                    <span class="tech-pill">NestJS</span>
+                                </div>
+                                <button class="btn-expand" onclick="toggleProject(this)">
+                                    <span class="expand-text">View Engineering Details</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </button>
+                                <div class="project-details" style="display:none;">
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-layer-group"></i> Overview</h4>
+                                        <p>Led the infrastructure migration of a production file storage system from Azure Blob Storage to AWS S3, implementing a drop-in provider abstraction that allowed seamless cutover without application-layer changes. Hardened ECS deployments and automated task definitions to improve release stability across environments.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-sitemap"></i> Architecture</h4>
+                                        <ul>
+                                            <li>Storage provider abstraction layer (interface-based) in NestJS</li>
+                                            <li>AWS S3 as the target with IAM role-based access control</li>
+                                            <li>LocalStack for local and CI integration testing of S3 operations</li>
+                                            <li>ECS task definitions managed via infrastructure-as-code patterns</li>
+                                            <li>Zero-downtime migration strategy using dual-write transitional phase</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-exclamation-triangle"></i> Engineering Challenges</h4>
+                                        <ul>
+                                            <li>Ensuring zero downtime during cutover without a maintenance window</li>
+                                            <li>Writing integration tests that run identically in local dev, CI, and staging</li>
+                                            <li>Hardening ECS task definitions for predictable rolling deployments</li>
+                                            <li>Abstracting provider-specific S3 and Azure APIs behind a unified interface</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-code-branch"></i> Key Decision</h4>
+                                        <p>Implemented a NestJS storage provider abstraction injected via dependency injection rather than calling the S3 SDK directly throughout the codebase. The migration became a single injection swap instead of hundreds of call-site changes, and tests stay clean by swapping in a LocalStack provider at test time.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                                        <p>Zero-downtime migration with full integration test coverage across local, CI, and staging environments. Improved deployment release stability and reduced cloud infrastructure costs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Virtualized React UI -->
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-card-banner banner-purple">
+                                <div class="banner-icon"><i class="fab fa-react"></i></div>
+                                <div class="banner-label">Frontend Engineering</div>
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-title">High-Performance Virtualized UI System</h3>
+                                <p class="project-summary">Scalable frontend components handling large datasets with virtualization, server-driven filtering, and keyboard navigation.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">React</span>
+                                    <span class="tech-pill">TypeScript</span>
+                                    <span class="tech-pill">React Query</span>
+                                    <span class="tech-pill">NestJS</span>
+                                    <span class="tech-pill">PostgreSQL</span>
+                                </div>
+                                <button class="btn-expand" onclick="toggleProject(this)">
+                                    <span class="expand-text">View Engineering Details</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </button>
+                                <div class="project-details" style="display:none;">
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-layer-group"></i> Overview</h4>
+                                        <p>Built a suite of high-performance virtualized React components — multi-select dropdowns, server-driven data tables, and calendar views — capable of handling large datasets without rendering bottlenecks. Integrated with server-side filtering and real-time analytics dashboards via React Query.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-sitemap"></i> Architecture</h4>
+                                        <ul>
+                                            <li>Virtual list rendering — only visible rows mounted in the DOM at any time</li>
+                                            <li>Server-driven filtering architecture with filter state in URL params, not component state</li>
+                                            <li>React Query for data fetching, caching, and background refetch</li>
+                                            <li>Custom keyboard navigation system for virtualized multi-select</li>
+                                            <li>NestJS reusable server-side filter layer supporting multiple client views</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-exclamation-triangle"></i> Engineering Challenges</h4>
+                                        <ul>
+                                            <li>Maintaining smooth 60fps scrolling in tables with 10,000+ rows</li>
+                                            <li>Keyboard navigation in a virtualized list where items are not always mounted</li>
+                                            <li>Synchronizing server-side filter state with optimistic UI updates</li>
+                                            <li>Building a calendar component that handles dense event data without layout thrashing</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-code-branch"></i> Key Decision</h4>
+                                        <p>Kept filter state server-driven (URL params + React Query) rather than local component state. This made all views bookmarkable, shareable, and independently refreshable — a critical requirement for support agent workflows that needed to resume sessions mid-filter.</p>
+                                    </div>
+                                    <div class="detail-section">
+                                        <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                                        <p>Eliminated rendering jank for large data tables and multi-select interactions, significantly improving support agent productivity on high-volume daily workflows.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section class="experience section" data-aos="fade-up">
+                    <div class="section-inner">
                         <h2 class="heading">Work Experience</h2>
                         <div class="content">
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title">Backend Software Developer - <span class="place"><a href="#">Touch Inspiration</a></span> <span class="year">(2023 - To Date)</span></h3>
-                                    <p>
-                                    Developing high-quality software solutions for various clients using NestJS and TypeScript.
-                                    </p>
-                                    <p>
-                                        Contributed to enhancing security measures and implementing new functionalities in legacy production app on loopbackJS with a Monthly Recurring Revenue (MRR) of $9,000. 
-                                    </p>
-                                    <p>
-                                        Structured a deployment process that achieves zero downtime using Docker and Jenkins. 
-                                            </p>
-                                    <p>
-                                        Ensuring optimal performance of database structures and responsiveness to front-end requests through caching and indexing. 
-                                    </p>
-                                    <p>
-                                        Writing and executing unit, integration, and system tests to ensure high-quality code.
-                                    </p>
-                                    <p>
-                                    Collaborating with cross-functional teams, including product owners, UX/UI designers, and other developers to deliver products that meet client requirements.
-                                    </p>
-                                    <p>
-                                        Work on creating caching services using Redis, set up web servers and security, create and deploy application containers 
-                                    </p>
-                                    <p>Architect Database designs for backend systems using relational and non-relational databases e.g. (PostgreSQL, MySQL, MongoDB). </p>
-                                    <p>
-                                        Developing high-performance applications using strongly typed language Typescript and writing testable, reusable, and efficient code.
-                                    </p> 
-                            </div>
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">AAA Platforms</a></span> <span class="year">(2019 - 2022)</span></h3>
-                            </div>
-                            <p>
-                            Developed and maintained scalable full-stack applications for various clients using technologies such as NodeJS, Laravel and GD Script
-                            </p>
-                            <p>
-                            Designed and implemented database architectures to optimize database performance and scalability.
-                            </p>
-                            <p>
-                        Created RESTful APIs and web services to integrate with third-party APIs and services.
-                            </p>
-                            <p>
-                                Mentored junior developers on best practices, code quality, and software development methodologies.
 
-                            </p>
-                            <p>
-                        Contributed to the development of internal tools and libraries to improve development efficiency and productivity.
+                            <!-- Piedmont Global -->
+                            <div class="exp-item" data-aos="fade-up">
+                                <div class="exp-meta">
+                                    <h3 class="exp-title">Senior Software Engineer</h3>
+                                    <div class="exp-company"><a href="https://piedmontglobal.com" target="_blank">Piedmont Global</a></div>
+                                    <div class="exp-details">
+                                        <span class="exp-badge badge-current">Current</span>
+                                        <span class="exp-period">Dec 2025 – Present</span>
+                                        <span class="exp-type">Full-time · On-site · Nairobi</span>
+                                    </div>
+                                </div>
+                                <div class="exp-domains">
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Distributed Systems &amp; Communications</span>
+                                        <p>Designing and operating large-scale real-time communications infrastructure using Twilio's programmable platform across voice, video, messaging, and task routing. Building event-driven systems with Inngest and AWS Lambda to orchestrate asynchronous processing and communication lifecycle events.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Cloud Infrastructure &amp; Platform Engineering</span>
+                                        <p>Developing and maintaining cloud-native infrastructure on AWS (S3, ECS, Lambda). Implementing containerized deployments, resilient storage architectures, and reliable release pipelines to maintain production stability.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Real-Time Systems</span>
+                                        <p>Building real-time data synchronization and event propagation systems using Pusher, enabling consistent updates and shared state across multiple browser sessions and distributed services.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Frontend Systems Engineering</span>
+                                        <p>Developing scalable frontend architectures using React and TypeScript, building high-performance interfaces capable of handling large datasets, advanced filtering, virtualization, and complex user interactions.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Data Systems &amp; APIs</span>
+                                        <p>Designing and implementing backend services using Node.js, NestJS, PostgreSQL, and TypeORM — scalable APIs, reusable data access layers, and analytics pipelines supporting multiple client views.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Developer Experience</span>
+                                        <p>Improving maintainability and velocity through type-safe tooling (ts-morph, ts-poet), standardized database migration patterns, and deterministic integration testing strategies using Jest and LocalStack.</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                            </p>
-                            <!--//item-->
+                            <!-- Rapid Tech Insights -->
+                            <div class="exp-item" data-aos="fade-up">
+                                <div class="exp-meta">
+                                    <h3 class="exp-title">Senior Software Engineer</h3>
+                                    <div class="exp-company">Rapid Tech Insights</div>
+                                    <div class="exp-details">
+                                        <span class="exp-period">Oct 2024 – Mar 2026</span>
+                                        <span class="exp-type">Contract · Hybrid · Nairobi</span>
+                                    </div>
+                                </div>
+                                <div class="exp-domains">
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Cloud Migration &amp; Infrastructure</span>
+                                        <p>Led migration of file storage from Azure Blob Storage to AWS S3, implementing a drop-in replacement strategy with LocalStack-powered integration tests. Took ownership of deployment hardening and automated ECS task definitions to improve release stability.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Real-Time Systems</span>
+                                        <p>Designed and implemented a real-time notification system using Pusher, including cross-tab synchronization. Refactored and extended Twilio TaskRouter integration with a custom <code>useTaskRouter</code> hook managing worker lifecycle, token refresh, and reservation handling.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Frontend Engineering</span>
+                                        <p>Built and shipped high-performance virtualized React components (multi-selects, server-driven tables, calendars) with custom filtering and keyboard navigation. Integrated and standardized React Email for production-grade transactional messaging.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Data &amp; APIs</span>
+                                        <p>Developed reusable server-side filtering layers supporting multiple client views. Built real-time analytics dashboards leveraging React Query for efficient transformations and visualization.</p>
+                                    </div>
+                                    <div class="exp-domain">
+                                        <span class="domain-label">Developer Experience</span>
+                                        <p>Introduced type-safe code generation pipelines with ts-morph/ts-poet, streamlined PostgreSQL enum migrations for long-term maintainability, and established NestJS + Jest integration testing patterns for deterministic coverage.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Touch Inspiration -->
+                            <div class="exp-item" data-aos="fade-up">
+                                <div class="exp-meta">
+                                    <h3 class="exp-title">Back End Developer</h3>
+                                    <div class="exp-company">Touch Inspiration</div>
+                                    <div class="exp-details">
+                                        <span class="exp-period">Jan 2023 – Dec 2024</span>
+                                        <span class="exp-type">Full-time · Remote · Nairobi</span>
+                                    </div>
+                                </div>
+                                <ul class="exp-bullets">
+                                    <li>Architected and maintained server-side systems and central database, ensuring performance and frontend responsiveness</li>
+                                    <li>Built customer-facing UI and back-end services across multiple business processes</li>
+                                    <li>Authored testable, reusable Node.js code; documented schemas and processes; maintained CI/CD deployment pipelines</li>
+                                    <li>Implemented security protocols, data protection, and storage solutions; ran diagnostics and provided technical support</li>
+                                </ul>
+                            </div>
+
+                            <!-- AAA Platforms -->
+                            <div class="exp-item" data-aos="fade-up">
+                                <div class="exp-meta">
+                                    <h3 class="exp-title">Software Developer</h3>
+                                    <div class="exp-company">AAA Platforms Ltd</div>
+                                    <div class="exp-details">
+                                        <span class="exp-period">Jan 2019 – Jan 2023</span>
+                                        <span class="exp-type">Full-time · Mombasa</span>
+                                    </div>
+                                </div>
+                                <ul class="exp-bullets">
+                                    <li>Managed cloud resources on AWS; nginx server configuration and domain name management</li>
+                                    <li>Containerized applications with Docker to ensure consistency and portability across environments</li>
+                                    <li>Designed and managed relational and document-based databases</li>
+                                    <li>Gathered and validated system requirements; collaborated on application schemas and service interfaces</li>
+                                </ul>
+                            </div>
 
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
-                <!-- </section> -->
-                <!--//section-->
-                 <!-- <section class="github section">
-                    <h2 class="heading">My GitHub</h2>
-                    <div class="calendar">
-                    </div>
+                </section>
 
-                    <!--//github-graph-->
-
-                            <!-- <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget. //Usage: https://caseyscarborough.com/projects/github-activity/
-                                <div id="ghfeed" class="ghfeed">
-                                </div> -->
-                            <!--//ghfeed-->
-                    <!--//secton-inner-->
-                <!-- </section>  --> 
-                <!--//section-->
             </div>
             <!--//primary-->
+
+            <!-- ===== SIDEBAR ===== -->
             <div class="secondary col-lg-4 col-12">
-                <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading sr-only">Basic Information</h2>
+
+                <!-- Contact Info -->
+                <aside class="info aside section" data-aos="fade-left">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Contact</h2>
                         <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Mombasa, Kenya</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="mailto:issa.suleiman008@gmail.com">issa.suleiman008@gmail.com</a></li>
+                            <ul class="list-unstyled info-list">
+                                <li><i class="fas fa-map-marker-alt"></i><span>Nairobi, Kenya</span></li>
+                                <li><i class="fas fa-envelope"></i><a href="mailto:issa.suleiman008@gmail.com">issa.suleiman008@gmail.com</a></li>
+                                <li><i class="fab fa-github"></i><a href="https://github.com/issar13/" target="_blank">github.com/issar13</a></li>
+                                <li><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/issa-suleiman" target="_blank">linkedin.com/in/issa-suleiman</a></li>
                             </ul>
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
                 </aside>
-                <!--//aside-->
 
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
+                <!-- Skills -->
+                <aside class="skills aside section" data-aos="fade-left" data-aos-delay="50">
+                    <div class="section-inner">
                         <h2 class="heading">Skills</h2>
                         <div class="content">
-                            <p class="intro">
-                                Full stack software developer with strengths in backend frameworks such as NodeJs, Laravel, Python paired with SQl proficiency in postgreSQL and mySQL. Also proficient with REACTJS</p>
-
-                            <div class="skillset">
-
-                                <div class="item">
-                                    <h3 class="level-title">Javascript, TypeScript &amp; JQuery<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                            <div class="skill-domains">
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fas fa-bolt"></i></div>
+                                    <div class="skill-domain-name">Realtime &amp; WebSockets</div>
+                                    <div class="skill-domain-tech">Pusher · WebSockets · SSE</div>
                                 </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">NodeJS/NestJS/LoopbackJS<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fas fa-server"></i></div>
+                                    <div class="skill-domain-name">Node / NestJS / LoopBack</div>
+                                    <div class="skill-domain-tech">TypeScript · REST · GraphQL</div>
                                 </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">RESTful APIs <span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="94"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fab fa-aws"></i></div>
+                                    <div class="skill-domain-name">AWS / Lambda / S3</div>
+                                    <div class="skill-domain-tech">ECS · LocalStack · Serverless</div>
                                 </div>
-                                <!--//item-->
-
-
-                                <div class="item">
-                                    <h3 class="level-title">Unit Testing<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fab fa-react"></i></div>
+                                    <div class="skill-domain-name">React / Virtualization</div>
+                                    <div class="skill-domain-tech">React Query · TypeScript</div>
                                 </div>
-
-                                <div class="item">
-                                    <h3 class="level-title">CI/CD Pipelines<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fas fa-database"></i></div>
+                                    <div class="skill-domain-name">PostgreSQL / Redis</div>
+                                    <div class="skill-domain-tech">TypeORM · Migrations</div>
                                 </div>
-
-                                <div class="item">
-                                    <h3 class="level-title">Git Versioning<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fas fa-phone-alt"></i></div>
+                                    <div class="skill-domain-name">Twilio / Comms APIs</div>
+                                    <div class="skill-domain-tech">TaskRouter · Voice · Messaging</div>
                                 </div>
-                                <div class="item">
-                                    <h3 class="level-title">Python<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fas fa-vial"></i></div>
+                                    <div class="skill-domain-name">TypeScript / Testing</div>
+                                    <div class="skill-domain-tech">Jest · ts-morph · ts-poet</div>
                                 </div>
-                                <!--//item-->
-
-                                <p><a class="more-link" href="https://www.github.com/issar13/"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p>
+                                <div class="skill-domain-card">
+                                    <div class="skill-domain-icon"><i class="fas fa-ship"></i></div>
+                                    <div class="skill-domain-name">CI/CD / Docker</div>
+                                    <div class="skill-domain-tech">GitHub Actions · ECS · Nginx</div>
+                                </div>
                             </div>
+                            <p class="mt-3"><a class="more-link" href="https://www.github.com/issar13/" target="_blank"><i class="fas fa-external-link-alt"></i> More on GitHub</a></p>
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
                 </aside>
-                <!--//section-->
 
-                <!--//section-->
-
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
+                <!-- Education -->
+                <aside class="education aside section" data-aos="fade-left" data-aos-delay="100">
+                    <div class="section-inner">
                         <h2 class="heading">Education</h2>
                         <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> Software Engineering Certificate</h3>
-                                <h4 class="university"> ALX Africa <span class="year">(2021-2022)</span></h4>
+                            <div class="edu-item">
+                                <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div>
+                                    <h3 class="edu-title">Software Engineering Certificate</h3>
+                                    <div class="edu-school">ALX Africa <span class="edu-year">2022–2023</span></div>
+                                </div>
                             </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> BSc in Supply Chain Management</h3>
-                                <h4 class="university"> Jomo Kenyatta University of Agriculture and Technology <span class="year">(2015-2019)</span></h4>
+                            <div class="edu-item">
+                                <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div>
+                                    <h3 class="edu-title">BSc in Supply Chain Management</h3>
+                                    <div class="edu-school">JKUAT <span class="edu-year">2014–2019</span></div>
+                                </div>
                             </div>
-                            <!--//item-->
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> Internation Computer Driving License</h3>
-                                <h4 class="university">Institute of Advanced Technology </h4>
+                            <div class="edu-item">
+                                <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                                <div>
+                                    <h3 class="edu-title">International Computer Driving License</h3>
+                                    <div class="edu-school">Institute of Advanced Technology</div>
+                                </div>
                             </div>
-
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
                 </aside>
-                <!--//section-->
 
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
+                <!-- Languages -->
+                <aside class="languages aside section" data-aos="fade-left" data-aos-delay="150">
+                    <div class="section-inner">
                         <h2 class="heading">Languages</h2>
                         <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                            <ul class="list-unstyled lang-list">
+                                <li class="lang-item">
+                                    <span class="lang-name">English</span>
+                                    <span class="lang-level">Native</span>
+                                    <div class="lang-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
                                 </li>
-                                <!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Kiswahili:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
+                                <li class="lang-item">
+                                    <span class="lang-name">Kiswahili</span>
+                                    <span class="lang-level">Native</span>
+                                    <div class="lang-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
                                 </li>
-                                <!--//item-->
                             </ul>
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
                 </aside>
-                <!--//section-->
-
-                <!-- <aside class="blog aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Latest Blog Posts</h2>
-                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">Vanilla RSS plugin</a> to pull in your blog post feeds.</p>
-                        <div id="rss-feeds" class="content">
-
-                        </div>
-                        //content
-                    </div>
-                    //section-inner
-                </aside> -->
-                <!--//section-->
-
-                <!-- <aside class="list music aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Favourite coding music</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>
-                            </ul>
-                        </div>
-                        //content
-                    </div>
-                    //section-inner
-                </aside> -->
-                <!--//section-->
-
-                <!-- <aside class="list conferences aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Conferences</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="far fa-calendar-alt"></i> <a href="#" target="_blank">WWDC 2030</a> (San Francisco)</li>
-                                <li><i class="far fa-calendar-alt"></i> <a href="#">Hive</a> (Seattle)</li>
-                            </ul>
-                        </div>
-                        //content
-                    </div>
-                    //section-inner
-                </aside> -->
-                <!--//section-->
-
-                <!-- <aside class="credits aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Credits</h2>
-                        <div class="content">
-                            <ul class="list-unstyled pb-2">
-                                <li><a href="https://getbootstrap.com/" target="_blank"><i class="fas fa-external-link-alt"></i>Bootstrap</a></li>
-                                <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><i class="fas fa-external-link-alt"></i>FontAwesome</a></li>
-                                <li><a href="https://github.com/IonicaBizau/github-calendar" target="_blank"><i class="fas fa-external-link-alt"></i>GitHub Calendar Plugin</a></li>
-
-                                <li><a href="https://caseyscarborough.com/projects/github-activity/" target="_blank"><i class="fas fa-external-link-alt"></i>GitHub Activity Stream</a></li>
-
-                                <li><a href="https://github.com/sdepold/vanilla-rss" target="_blank"><i class="fas fa-external-link-alt"></i>Vanilla RSS</a></li>
-                                <li><a href="https://github.com/coliff/dark-mode-switch"><i class="fas fa-external-link-alt"></i>Dark Mode Switch</a></li>
-
-                            </ul>
-
-                            <hr/>
-
-                            <p class="pt-2">This Boootstrap portfolio template is handcrafted by UX designer <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a> at <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a>                                for developers and is <strong>FREE</strong> as long as you keep the footer attribution link.</p>
-                            <p>If you’d like to <strong>use this template without the attribution link</strong>, you can <a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/" target="_blank">buy the commercial license</a>.</p>
-
-                            <a class="btn btn-cta-primary btn-download" href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/" target="_blank"><i class="fas fa-download"></i> I want to download</a>
-                            <hr/>
-                            <h5 class="subheading pt-3">Want more free Bootstrap themes and templates?</h5>
-                            <p>Check out our <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/">collection of free themes and templates.</a></p>
-                            <p>Follow <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying</a> on twitter so you don't miss any future freebies!</p>
-
-                            <a class="btn btn-cta-secondary btn-follow" href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fab fa-twitter"></i> Follow on twitter</a>
-
-                        </div>
-                        //content
-                    </div>
-                    //section-inner
-                </aside> -->
-                <!--//section-->
 
             </div>
             <!--//secondary-->
         </div>
         <!--//row-->
     </div>
-    <!--//masonry-->
+    <!--//sections-wrapper-->
 
-    <!-- ******FOOTER****** -->
-    <!--//footer-->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">IS</div>
+                <p class="footer-text">Issa Mwazighe Suleiman · Senior Software Engineer</p>
+                <div class="footer-links">
+                    <a href="https://github.com/issar13/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/issa-suleiman" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:issa.suleiman008@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Javascript -->
+    <!-- Scripts -->
     <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/dark-mode-switch/dark-mode-switch.min.js"></script>
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
-    <!-- custom js -->
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Custom JS -->
     <script type="text/javascript" src="assets/js/main.js"></script>
-<script>
-    GitHubCalendar(".calendar", "issar13");
 
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "issar13", { responsive: true });
-
-    // Use a proxy
-    GitHubCalendar(".calendar", "issar13", {
-       proxy (username) {
-         return fetch(`https://your-proxy.com/github?user=${issar13}`)
-       }
-    }).then(r => r.text())
-</script>
 </body>
 
 </html>
