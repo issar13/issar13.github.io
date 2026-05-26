@@ -1,0 +1,9 @@
+---
+description: Git commit conventions for this project
+alwaysApply: true
+---
+
+# Git Commit Rules
+
+- NEVER add `Co-authored-by` trailers to any commit message.
+- Commits are solely authored by the user — do not include any AI co-author attribution.
