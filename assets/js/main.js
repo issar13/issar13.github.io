@@ -8,6 +8,22 @@
     var NODES = 60, LINK_DIST = 140, COLOR = '167,139,250';
     var nodes = [];
 
+    // Heartbeat timing
+    var BEAT_INTERVAL = 2400; // ms between heartbeat cycles
+    var lastBeat      = Date.now();
+    var pulse         = 0;   // 0..1 current pulse intensity
+
+    function getPulse(now) {
+        var t = (now - lastBeat);
+        if (t > BEAT_INTERVAL) { lastBeat = now; t = 0; }
+        // lub: 0–180ms, gap: 180–320ms, dub: 320–500ms, rest
+        var p = 0;
+        if      (t < 180) p = Math.sin(Math.PI * t / 180);
+        else if (t < 320) p = 0;
+        else if (t < 500) p = 0.7 * Math.sin(Math.PI * (t - 320) / 180);
+        return p;
+    }
+
     function resize() {
         canvas.width  = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -28,6 +44,12 @@
 
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pulse = getPulse(Date.now());
+
+        var nodeAlpha = 0.38 + pulse * 0.42;
+        var lineBase  = 0.14 + pulse * 0.18;
+        var radiusBoost = 1 + pulse * 0.7;
+
         var i, j, n, dx, dy, dist, alpha;
 
         for (i = 0; i < nodes.length; i++) {
@@ -36,10 +58,10 @@
                 dy   = nodes[i].y - nodes[j].y;
                 dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < LINK_DIST) {
-                    alpha = 0.16 * (1 - dist / LINK_DIST);
+                    alpha = lineBase * (1 - dist / LINK_DIST);
                     ctx.beginPath();
                     ctx.strokeStyle = 'rgba(' + COLOR + ',' + alpha + ')';
-                    ctx.lineWidth   = 0.7;
+                    ctx.lineWidth   = 0.7 + pulse * 0.5;
                     ctx.moveTo(nodes[i].x, nodes[i].y);
                     ctx.lineTo(nodes[j].x, nodes[j].y);
                     ctx.stroke();
@@ -50,8 +72,8 @@
         for (i = 0; i < nodes.length; i++) {
             n = nodes[i];
             ctx.beginPath();
-            ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(' + COLOR + ',0.4)';
+            ctx.arc(n.x, n.y, n.r * radiusBoost, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(' + COLOR + ',' + nodeAlpha + ')';
             ctx.fill();
             n.x += n.vx;
             n.y += n.vy;
