@@ -298,6 +298,7 @@ code {
 .section { margin-bottom: 22px; }
 
 .section-inner {
+    overflow: hidden;
     background-color: var(--bg-card);
     background-image:
         linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
@@ -322,7 +323,7 @@ code {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 30px 28px;
-    transition: var(--transition), padding-bottom 0.28s ease, background-size 0.22s ease, background-image 0.22s ease;
+    transition: var(--transition), padding-top 0.28s ease, padding-bottom 0.28s ease, background-size 0.22s ease, background-image 0.22s ease;
     position: relative;
 }
 .section-inner:hover {
@@ -409,7 +410,8 @@ code {
 }
 .section-inner.collapsed {
     transform: none !important;
-    padding-bottom: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
 .heading {
