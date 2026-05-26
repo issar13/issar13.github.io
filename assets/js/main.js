@@ -187,10 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Expand: set explicit height so transition has a target
                 inner.classList.remove('collapsed');
                 body.style.height = body.scrollHeight + 'px';
-                body.addEventListener('transitionend', function done() {
-                    body.style.height = 'auto';
-                    body.removeEventListener('transitionend', done);
-                });
+                setTimeout(function () { body.style.height = 'auto'; }, 200);
             } else {
                 // Collapse: pin current height, then animate to 0
                 body.style.height = body.scrollHeight + 'px';

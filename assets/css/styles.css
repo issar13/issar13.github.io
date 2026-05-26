@@ -323,7 +323,7 @@ code {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 30px 28px;
-    transition: var(--transition), padding-top 0.28s ease, padding-bottom 0.28s ease, background-size 0.22s ease, background-image 0.22s ease;
+    transition: var(--transition), padding-top 0.2s ease, padding-bottom 0.2s ease, background-size 0.22s ease, background-image 0.22s ease;
     position: relative;
 }
 .section-inner:hover {
@@ -331,19 +331,24 @@ code {
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
     background-image:
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
-        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8));
-    background-size:
-        2px 20px, 20px 2px,
-        2px 20px, 20px 2px,
-        2px 20px, 20px 2px,
-        2px 20px, 20px 2px;
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
+        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9));
+    animation: corner-heartbeat 2.4s ease-in-out infinite;
+}
+
+@keyframes corner-heartbeat {
+    0%   { background-size: 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px; }
+    12%  { background-size: 2px 24px, 24px 2px, 2px 24px, 24px 2px, 2px 24px, 24px 2px, 2px 24px, 24px 2px; }
+    24%  { background-size: 2px 15px, 15px 2px, 2px 15px, 15px 2px, 2px 15px, 15px 2px, 2px 15px, 15px 2px; }
+    36%  { background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px, 2px 20px, 20px 2px, 2px 20px, 20px 2px; }
+    52%  { background-size: 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px; }
+    100% { background-size: 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px, 2px 14px, 14px 2px; }
 }
 
 /* ======= Terminal Tab Bar ======= */
@@ -356,7 +361,7 @@ code {
     border-bottom: 1px solid var(--border-color);
     cursor: pointer;
     user-select: none;
-    transition: padding-bottom 0.28s ease, margin-bottom 0.28s ease, border-color 0.28s ease;
+    transition: padding-bottom 0.2s ease, margin-bottom 0.2s ease, border-color 0.2s ease;
 }
 .card-tab:hover .tab-label { color: var(--accent-green); }
 .tab-dots {
@@ -395,7 +400,7 @@ code {
 .card-body {
     overflow: hidden;
     opacity: 1;
-    transition: height 0.28s ease, opacity 0.15s ease;
+    transition: height 0.2s ease, opacity 0.1s ease;
 }
 .section-inner.collapsed .card-body {
     opacity: 0;
