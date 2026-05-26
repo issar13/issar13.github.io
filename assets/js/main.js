@@ -117,7 +117,24 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.card-tab').forEach(function (tab) {
         tab.addEventListener('click', function () {
             var inner = tab.closest('.section-inner');
-            if (inner) inner.classList.toggle('collapsed');
+            var body  = inner && inner.querySelector('.card-body');
+            if (!inner || !body) return;
+
+            if (inner.classList.contains('collapsed')) {
+                // Expand: set explicit height so transition has a target
+                inner.classList.remove('collapsed');
+                body.style.height = body.scrollHeight + 'px';
+                body.addEventListener('transitionend', function done() {
+                    body.style.height = 'auto';
+                    body.removeEventListener('transitionend', done);
+                });
+            } else {
+                // Collapse: pin current height, then animate to 0
+                body.style.height = body.scrollHeight + 'px';
+                body.offsetHeight; // force reflow
+                body.style.height = '0';
+                inner.classList.add('collapsed');
+            }
         });
     });
 });
