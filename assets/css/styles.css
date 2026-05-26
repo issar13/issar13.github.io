@@ -299,16 +299,30 @@ code {
 
 .section-inner {
     overflow: hidden;
-    background-color: var(--bg-card);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 30px 28px;
+    transition: var(--transition), padding-top 0.2s ease, padding-bottom 0.2s ease;
+    position: relative;
+}
+
+/* Corner accents live on ::before so only they animate, not the card content */
+.section-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
     background-image:
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
-        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25));
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3)),
+        linear-gradient(rgba(167,139,250,0.3), rgba(167,139,250,0.3));
     background-repeat: no-repeat;
     background-size:
         2px 13px, 13px 2px,
@@ -320,25 +334,25 @@ code {
         top 0 right 0, top 0 right 0,
         bottom 0 left 0,  bottom 0 left 0,
         bottom 0 right 0, bottom 0 right 0;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 30px 28px;
-    transition: var(--transition), padding-top 0.2s ease, padding-bottom 0.2s ease, background-size 0.22s ease, background-image 0.22s ease;
-    position: relative;
+    transition: background-image 0.22s ease, background-size 0.22s ease;
 }
+
 .section-inner:hover {
     border-color: rgba(167,139,250,0.3);
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
+}
+
+.section-inner:hover::before {
     background-image:
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9)),
-        linear-gradient(rgba(167,139,250,0.9), rgba(167,139,250,0.9));
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95)),
+        linear-gradient(rgba(167,139,250,0.95), rgba(167,139,250,0.95));
     background-size:
         2px 20px, 20px 2px,
         2px 20px, 20px 2px,
@@ -348,12 +362,12 @@ code {
 }
 
 @keyframes corner-heartbeat {
-    0%   { opacity: 0.75; }
-    12%  { opacity: 1;    }
-    24%  { opacity: 0.8;  }
-    36%  { opacity: 1;    }
-    52%  { opacity: 0.75; }
-    100% { opacity: 0.75; }
+    0%   { opacity: 0.6; }
+    12%  { opacity: 1;   }
+    24%  { opacity: 0.7; }
+    36%  { opacity: 1;   }
+    52%  { opacity: 0.6; }
+    100% { opacity: 0.6; }
 }
 
 /* ======= Terminal Tab Bar ======= */
