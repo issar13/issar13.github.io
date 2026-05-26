@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         AOS.init({ duration: 650, once: true, offset: 55, easing: 'ease-out-cubic' });
     }
 
-    // ======= Heartbeat word swap =======
+    // ======= Heartbeat typewriter =======
     var subtitleEl = document.getElementById('typed-subtitle');
     if (subtitleEl) {
         var subtitleWords = [
@@ -118,17 +118,42 @@ document.addEventListener('DOMContentLoaded', function () {
             'Fullstack Product Engineering',
         ];
         var subtitleIdx = 0;
-        subtitleEl.textContent = subtitleWords[0];
-        subtitleEl.style.transition = 'opacity 0.18s ease';
 
-        window.addEventListener('heartbeat-lub', function () {
-            subtitleEl.style.opacity = '0';
-            setTimeout(function () {
-                subtitleIdx = (subtitleIdx + 1) % subtitleWords.length;
-                subtitleEl.textContent = subtitleWords[subtitleIdx];
-                subtitleEl.style.opacity = '1';
-            }, 180);
-        });
+        // lub-dub rhythm: char 0,1 fast → pause → char 2,3 fast → pause…
+        function charDelay(i) {
+            var phase = i % 3;
+            return phase < 2 ? 58 : 210;
+        }
+
+        function typeOut(word, i, done) {
+            subtitleEl.textContent = word.slice(0, i);
+            if (i < word.length) {
+                setTimeout(function () { typeOut(word, i + 1, done); }, charDelay(i));
+            } else {
+                setTimeout(done, 1800);
+            }
+        }
+
+        function eraseOut(word, i, done) {
+            subtitleEl.textContent = word.slice(0, i);
+            if (i > 0) {
+                setTimeout(function () { eraseOut(word, i - 1, done); }, 32);
+            } else {
+                setTimeout(done, 120);
+            }
+        }
+
+        function cycle() {
+            var word = subtitleWords[subtitleIdx];
+            typeOut(word, 0, function () {
+                eraseOut(word, word.length, function () {
+                    subtitleIdx = (subtitleIdx + 1) % subtitleWords.length;
+                    cycle();
+                });
+            });
+        }
+
+        cycle();
     }
 
     // ======= Scroll Progress Bar =======
