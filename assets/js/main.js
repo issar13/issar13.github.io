@@ -12,10 +12,20 @@
     var BEAT_INTERVAL = 2400; // ms between heartbeat cycles
     var lastBeat      = Date.now();
     var pulse         = 0;   // 0..1 current pulse intensity
+    var beatFired     = false;
 
     function getPulse(now) {
         var t = (now - lastBeat);
-        if (t > BEAT_INTERVAL) { lastBeat = now; t = 0; }
+        if (t > BEAT_INTERVAL) {
+            lastBeat  = now;
+            t         = 0;
+            beatFired = false;
+        }
+        // Fire word-swap event on the lub peak (~90ms in)
+        if (!beatFired && t > 90) {
+            beatFired = true;
+            window.dispatchEvent(new CustomEvent('heartbeat-lub'));
+        }
         // lub: 0–180ms, gap: 180–320ms, dub: 320–500ms, rest
         var p = 0;
         if      (t < 180) p = Math.sin(Math.PI * t / 180);
@@ -97,21 +107,27 @@ document.addEventListener('DOMContentLoaded', function () {
         AOS.init({ duration: 650, once: true, offset: 55, easing: 'ease-out-cubic' });
     }
 
-    // ======= Typed.js =======
-    if (typeof Typed !== 'undefined' && document.getElementById('typed-subtitle')) {
-        new Typed('#typed-subtitle', {
-            strings: [
-                'Realtime Systems',
-                'Communication Infrastructure',
-                'Backend Architecture',
-                'Distributed Systems',
-                'Fullstack Product Engineering',
-            ],
-            typeSpeed: 60,
-            backSpeed: 32,
-            backDelay: 2200,
-            loop: true,
-            smartBackspace: true,
+    // ======= Heartbeat word swap =======
+    var subtitleEl = document.getElementById('typed-subtitle');
+    if (subtitleEl) {
+        var subtitleWords = [
+            'Realtime Systems',
+            'Communication Infrastructure',
+            'Backend Architecture',
+            'Distributed Systems',
+            'Fullstack Product Engineering',
+        ];
+        var subtitleIdx = 0;
+        subtitleEl.textContent = subtitleWords[0];
+        subtitleEl.style.transition = 'opacity 0.18s ease';
+
+        window.addEventListener('heartbeat-lub', function () {
+            subtitleEl.style.opacity = '0';
+            setTimeout(function () {
+                subtitleIdx = (subtitleIdx + 1) % subtitleWords.length;
+                subtitleEl.textContent = subtitleWords[subtitleIdx];
+                subtitleEl.style.opacity = '1';
+            }, 180);
         });
     }
 
