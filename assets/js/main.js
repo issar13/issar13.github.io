@@ -112,6 +112,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// ======= Section Card Collapse / Expand =======
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.card-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            var inner = tab.closest('.section-inner');
+            if (inner) inner.classList.toggle('collapsed');
+        });
+    });
+});
+
 // ======= Project Card Expand / Collapse =======
 function toggleProject(btn) {
     var body = btn.closest('.project-card-body');
