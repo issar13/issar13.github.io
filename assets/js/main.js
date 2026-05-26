@@ -2,11 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ======= AOS =======
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 650, once: true, offset: 55, easing: 'ease-out-cubic' });
-    }
-
     // ======= Typed.js =======
     if (typeof Typed !== 'undefined' && document.getElementById('typed-subtitle')) {
         new Typed('#typed-subtitle', {
