@@ -291,41 +291,51 @@ code {
 .section { margin-bottom: 22px; }
 
 .section-inner {
-    background: var(--bg-card);
+    background-color: var(--bg-card);
+    background-image:
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25)),
+        linear-gradient(rgba(167,139,250,0.25), rgba(167,139,250,0.25));
+    background-repeat: no-repeat;
+    background-size:
+        2px 13px, 13px 2px,
+        2px 13px, 13px 2px,
+        2px 13px, 13px 2px,
+        2px 13px, 13px 2px;
+    background-position:
+        top 0 left 0,  top 0 left 0,
+        top 0 right 0, top 0 right 0,
+        bottom 0 left 0,  bottom 0 left 0,
+        bottom 0 right 0, bottom 0 right 0;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: 30px 28px;
-    transition: var(--transition), padding-bottom 0.28s ease;
+    transition: var(--transition), padding-bottom 0.28s ease, background-size 0.22s ease, background-image 0.22s ease;
     position: relative;
-}
-.section-inner::before,
-.section-inner::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-color: var(--accent-green);
-    border-style: solid;
-    transition: width 0.22s ease, height 0.22s ease;
-    border-radius: 1px;
-}
-.section-inner::before {
-    top: -1px; left: -1px;
-    border-width: 2px 0 0 2px;
-}
-.section-inner::after {
-    bottom: -1px; right: -1px;
-    border-width: 0 2px 2px 0;
 }
 .section-inner:hover {
     border-color: rgba(167,139,250,0.3);
     box-shadow: var(--shadow-card);
     transform: translateY(-2px);
-}
-.section-inner:hover::before,
-.section-inner:hover::after {
-    width: 22px;
-    height: 22px;
+    background-image:
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8)),
+        linear-gradient(rgba(167,139,250,0.8), rgba(167,139,250,0.8));
+    background-size:
+        2px 20px, 20px 2px,
+        2px 20px, 20px 2px,
+        2px 20px, 20px 2px,
+        2px 20px, 20px 2px;
 }
 
 /* ======= Terminal Tab Bar ======= */
