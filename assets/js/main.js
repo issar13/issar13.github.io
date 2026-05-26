@@ -5,7 +5,7 @@
     var canvas = document.getElementById('network-bg');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
-    var NODES = 72, LINK_DIST = 140, COLOR = '167,139,250';
+    var NODES = 90, LINK_DIST = 140, COLOR = '167,139,250';
     var nodes = [];
 
     // Heartbeat timing
